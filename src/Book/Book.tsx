@@ -4,9 +4,10 @@ import { Wrapper } from "./Book.styles";
 
 type Props = {
     book: CartItemType;
+    handleAddToCart: (clickedItem: CartItemType) => void;
 }
 
-const Book: React.FC<Props> = ({book}) => (
+const Book: React.FC<Props> = ({book, handleAddToCart}) => (
     <Wrapper>
         <div className="book-item">        
             <div className="book-infos">
@@ -15,7 +16,7 @@ const Book: React.FC<Props> = ({book}) => (
                 <div className="book-desc">{ book.synospis }</div> 
                 <div className="book-bottom">
                     <div className="book-price">{ book.price }€</div> 
-                    <a><span className="added">Ajouter</span></a>
+                    <a onClick={() => handleAddToCart(book)}><span className="added">Ajouter</span></a>
                 </div>
             </div> 
         </div>

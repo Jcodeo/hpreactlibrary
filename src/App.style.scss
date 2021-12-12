@@ -27,6 +27,20 @@ body{
     .spacer{
         flex: 1 1 auto;
     }
+    a{
+        cursor: pointer;
+        .quantity {
+            background: red;
+            width: 20px;
+            height: 20px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: relative;
+            top: -5px;
+        }
+    }
 }
 
 .book-wrapper{
@@ -124,6 +138,7 @@ body{
                             min-width: 64px;
                             border-radius: 4px;
                             padding: 0 5px;
+                            cursor: pointer;
                             .mat-icon{
                                 transform: scale(1);
                                 transition: all ease-in-out 300ms;
